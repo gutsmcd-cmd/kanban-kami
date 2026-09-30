@@ -1,0 +1,45 @@
+:root { --acc: #0f766e; --acc-ink: #fff; --paper: #e6f3f0; }
+@media (prefers-color-scheme: dark) { :root { --paper: #12211f; } }
+#app { max-width: 1080px; }
+.tools { display: flex; flex-wrap: wrap; gap: 8px; }
+.tools .btn { flex: 1 1 30%; min-height: 44px; font-size: 0.92rem; }
+.hint { margin: 0; }
+.scroller {
+  display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory;
+  padding-bottom: 8px; overscroll-behavior-x: contain;
+}
+.col {
+  flex: 0 0 min(320px, 86vw); scroll-snap-align: start;
+  background: var(--paper); border-radius: 16px; padding: 10px;
+  display: flex; flex-direction: column; gap: 8px; min-height: 52vh;
+  max-height: calc(100dvh - 210px);
+}
+.col.drop { outline: 2px solid var(--acc); }
+.col-head { display: flex; align-items: center; gap: 6px; }
+.col-name {
+  flex: 1; text-align: left; border: 0; background: transparent; font-weight: 800;
+  font-size: 1.02rem; min-height: 44px; padding: 4px;
+}
+.col-count {
+  min-width: 28px; height: 28px; border-radius: 999px; display: grid; place-items: center;
+  background: var(--card); font-size: 0.8rem; font-weight: 800; color: var(--muted);
+}
+.cards { display: flex; flex-direction: column; gap: 8px; overflow-y: auto; flex: 1; min-height: 48px; }
+.kcard {
+  display: flex; align-items: stretch; gap: 2px; background: var(--card);
+  border-radius: 14px; box-shadow: var(--shadow); padding: 4px;
+}
+.kcard.dragging { box-shadow: 0 12px 28px rgba(0,0,0,.28); }
+.grip {
+  width: 44px; border: 0; background: transparent; color: var(--muted);
+  display: grid; place-items: center; touch-action: none; border-radius: 10px; flex: none;
+}
+.kbody { flex: 1; min-width: 0; text-align: left; border: 0; background: transparent; padding: 8px 4px; }
+.k-title { font-weight: 800; word-break: break-word; }
+.k-note { color: var(--muted); font-size: 0.85rem; white-space: pre-wrap; word-break: break-word; }
+.placeholder {
+  border: 2px dashed color-mix(in srgb, var(--acc) 65%, #fff);
+  border-radius: 12px; min-height: 52px;
+  background: color-mix(in srgb, var(--acc) 14%, transparent);
+}
+.add { width: 100%; }
