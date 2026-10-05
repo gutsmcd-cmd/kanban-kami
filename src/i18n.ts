@@ -26,7 +26,7 @@ const ja = {
 };
 export type Dict = typeof ja;
 const en: Dict = {
-  app: 'Kanban Kami',
+  app: 'To-Do Board',
   addBoard: 'Add board',
   renameBoard: 'Rename board',
   deleteBoard: 'Delete board',
