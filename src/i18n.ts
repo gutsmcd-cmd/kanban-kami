@@ -1,6 +1,6 @@
 export type Lang = 'ja' | 'en';
 const ja = {
-  app: 'かんばん紙',
+  app: 'かんばんボード',
   addBoard: 'ボードを追加',
   renameBoard: 'ボード名',
   deleteBoard: 'ボードを削除',
