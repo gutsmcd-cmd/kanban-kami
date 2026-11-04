@@ -102,7 +102,7 @@ function setLang(l: Lang) {
   state.lang = l;
   t = dicts[l];
   document.documentElement.lang = l;
-  document.title = t.app;
+  document.title = 'To-Do Board';
   void persist();
   render();
 }
@@ -379,7 +379,7 @@ async function boot() {
   state = sanitize(await loadState(fresh()));
   t = dicts[state.lang];
   document.documentElement.lang = state.lang;
-  document.title = t.app;
+  document.title = 'To-Do Board';
   render();
   window.addEventListener('pagehide', () => { void persist(); });
 }

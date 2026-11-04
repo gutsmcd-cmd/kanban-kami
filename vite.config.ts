@@ -9,8 +9,8 @@ export default defineConfig({
       includeAssets: ['icons/*.png'],
       manifest: {
         id: '/kanban-kami/',
-        name: 'かんばんボード',
-        short_name: 'かんばんボード',
+        name: 'To-Do Board',
+        short_name: 'To-Do Board',
         description:
           '自分用のかんばん。無料・広告なし・ログイン不要・オフライン対応。A personal kanban — free, no ads, no login, offline.',
         lang: 'ja',
